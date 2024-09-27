@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer1')">what is your return policy</div>
+            <div class="faq-answer" id="answer1">You can return any item within 30 days of purchase. The item must be in its original condition.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer2')">How do I track my order?</div>
+            <div class="faq-answer" id="answer2">Once your order has shipped, you will receive an email with a tracking number and a link to track your order.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer3')">Do you ship internationally?</div>
+            <div class="faq-answer" id="answer3">Yes, we offer international shipping. Please check our shipping options at checkout for more details.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(answerId) {
+            var answerElement = document.getElementById(answerId);
+            if (answerElement.classList.contains('show')) {
+                answerElement.classList.remove('show');
+            } else {
+                var allAnswers = document.querySelectorAll('.faq-answer');
+                allAnswers.forEach(function(answer) {
+                    answer.classList.remove('show');
+                });
+                answerElement.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
