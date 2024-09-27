@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pomodoro timer | focus</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+    
+<body>
+    <div id="timer-messsage">select a time befor starting.</div>
+
+    <div class="container">
+    <div class="timer">
+        <h1>⏰pomodoro timer</h1>
+
+        <div class="button-container">
+            <button class="button " id="pomodoro-session">pomodoro</button>
+            <button class="button" id="short-break">short break</button>
+            <button class="button" id="long-break">long break</button>
+        </div>
+    <main>
+            <div class="pomodoro">
+                <div id="pomodoro-timer" class="timer-display" data-duration="45.00">
+                    <h1 class="time">45.00</h1>
+                    
+                </div>
+                
+                <div id="short-timer" class="timer-display" data-duration="25.00">
+                    <h1 class="time">25.00</h1>
+                </div>
+                
+                <div id="long-timer" class="timer-display" data-duration="10.00">
+                    <h1 class="time">10.00</h1>
+                </div>
+            </div>
+        </main>
+    
+        <div class="buttons">
+            <input type="button" id="start" value="START">
+            <input type="button" id="stop" value="STOP">
+            <input type="button" id="pause" value="PAUSE">
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script scr="script.js"></script>
+    
+</body>
+</html>
